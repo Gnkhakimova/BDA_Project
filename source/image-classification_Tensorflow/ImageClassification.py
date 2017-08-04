@@ -131,7 +131,7 @@ def conv2d_maxpool(x_tensor, conv_num_outputs, conv_ksize, conv_strides, pool_ks
     :param pool_strides: Stride 2-D Tuple for pool
     : return: A tensor that represents convolution and max pooling of x_tensor
     """
-    # Tensorflow has the crappiest API I've ever seen
+    # Tensorflow API
     input_depth = x_tensor.get_shape().as_list()[-1]
     W = tf.Variable(tf.random_normal(
         [conv_ksize[0], conv_ksize[1], input_depth, conv_num_outputs],
