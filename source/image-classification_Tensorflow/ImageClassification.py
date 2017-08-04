@@ -157,8 +157,6 @@ def flatten(x_tensor):
     : return: A tensor of size (Batch Size, Flattened Image Size).
     """
     shape = x_tensor.get_shape().as_list()
-    # Again, tensorflow is simply ridiculous. I receive a dimension with None but
-    # can't pass it along? WTF?!
     return tf.reshape(x_tensor, [-1, np.prod(shape[1:])])
 
 
